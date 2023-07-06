@@ -53,13 +53,15 @@ It is the first assumption that is to be satisfied to go in the future steps. Th
 #### 10. Checking The Homogeneity of Variance:
 Homogeneity of Variances does not mean that all the values respect to each group must have same Variances. It means that the Variances of each group is significantly not different. Now we can find the respevtive Variances using the **with()** and **tapply()** function and using 'var' as an argument. But using this we can not conclude that the Variances we get are Significatly Statistically Differnet or not. For this we use a test called **Bartlett Test**. In R we can conduct this test using the **bartlett.test()** function. This test also gives P-value. If our calculated P-value is grater than 0.05,then we conclude that the Variances of groups are significantly statistically same. 
 
+#### 11. Model Building for This Project:
+Now to conduct and construct the test we build the model using the lm() function. Here we consider the len variable as continuous response variable and supp, dose and their interaction term as predictor variables. We name this model as fit_model.
 
+#### 12. Making the ANOVA Table for Data Analysis:
+To make the ANOVA table we use the Anova() functuion that comes under the car package. Here we consider the type-III ANOVA which considers the interaction effect. Then we print the summary of the model.
 
+#### 13. Customizing the ANOVA Model:
+Now sometimes it is seen that the variables that are significant (Having P-value less than 0.05) are marked by stars. Sometimes this becomes annoying. To delete the stars we can use the **options()** function.
 
-
-
-
-
-
-
+#### 14. Comparison Between the Levels of doses and type of supplement used:
+In this step we consider the model called fit_model and compare the model to the dose column , supp column and to theinteraction term. After that we perform Tukey's Test. This is used to find the means that are significantly different from each other. The means are differnet for total 4 samples that we consider in combined method.
 
