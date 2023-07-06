@@ -38,7 +38,12 @@ To know the distribution on a avriable with respect to another variables we cons
 
 #### 7. Interaction Plot:
 Here we are considering an interaction term between the supp and dose variable. Interaction plot is very helpful in such cases. This includes the average change in the tooth length in its mean form. We use the with() function to create a box plot and can ciustomize the plot sing different code segments. 
-**Note:** When two intercation plots are parallel to each other, we conclude that there is no type interaction effect exsists between the variables. In other hand if the interactions plot intersects each other or tend to intetrsect each other, then we say there is interaction effect between the variables. 
+**Note:** When two intercation plots are parallel to each other, we conclude that there is no type interaction effect exsists between the variables. In other hand if the interactions plot intersects each other or tend to intetrsect each other, then we say there is interaction effect between the variables. The dots that we can see on the interaction plot indiactes the mean value of tooth length with respect to each and every combinations. 
+
+#### 8. Assumption for this Test:
+There are manily two observations or assumptions that we can make before going to the main project of factorial design. They are-
+* All the continuous column should be Normally distributed and
+* There will be Homogeneity of Variances between the elements of the design.
 
 
 
