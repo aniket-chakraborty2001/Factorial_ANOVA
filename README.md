@@ -27,10 +27,18 @@ In this step we conduct some basic data exploration works to understand the data
 #### **Observation:**
 Here we are conducting Factorial ANOVA test. So the predictor variables must be categorical. Here we observe that the predictor variable named dose is not in factor format. So we fisrt convert it the factor format having three levels. Low, Medium and High respectively. Here there are 2 factors and one has 2 levels and the another one has 3 levels. So it is not a generalied 2^k Factorial model. It is a (2*3)=6 factorial models as 6 combinations are possible in this case. 
   
+#### 5. Creating the Contingency table:
+Then I create a contingency table using the table() function with the supp and dose column of the data set. We also called this table as cross tabulation table. If all the entries of the cross tabulation table are almist equal then we say that the design is balanced or balanced design. In our data set all elemnts are equal to 10 indicating that this is a balanced design. 
 
+#### 6. Visualizing the Distribution of Predictors on Response Variable:
+To know the distribution on a avriable with respect to another variables we consider the Box plot. Here we also create three boxplots. They are-
+* Distribution of tooth length over supplement used (supp).
+* Distribution of tooth length over dosage of medication (dose).
+* We alslo consider an interaction term between Supp and Dose to observe any effect on Response variable
 
-
-
+#### 7. Interaction Plot:
+Here we are considering an interaction term between the supp and dose variable. Interaction plot is very helpful in such cases. This includes the average change in the tooth length in its mean form. We use the with() function to create a box plot and can ciustomize the plot sing different code segments. 
+**Note:** When two intercation plots are parallel to each other, we conclude that there is no type interaction effect exsists between the variables. In other hand if the interactions plot intersects each other or tend to intetrsect each other, then we say there is interaction effect between the variables. 
 
 
 
