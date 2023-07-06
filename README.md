@@ -32,12 +32,14 @@ Then I create a contingency table using the table() function with the supp and d
 
 #### 6. Visualizing the Distribution of Predictors on Response Variable:
 To know the distribution on a avriable with respect to another variables we consider the Box plot. Here we also create three boxplots. They are-
+
 * Distribution of tooth length over supplement used (supp).
 * Distribution of tooth length over dosage of medication (dose).
 * We alslo consider an interaction term between Supp and Dose to observe any effect on Response variable
 
 #### 7. Interaction Plot:
 Here we are considering an interaction term between the supp and dose variable. Interaction plot is very helpful in such cases. This includes the average change in the tooth length in its mean form. We use the with() function to create a box plot and can ciustomize the plot sing different code segments. 
+
 **Note:** When two intercation plots are parallel to each other, we conclude that there is no type interaction effect exsists between the variables. In other hand if the interactions plot intersects each other or tend to intetrsect each other, then we say there is interaction effect between the variables. The dots that we can see on the interaction plot indiactes the mean value of tooth length with respect to each and every combinations. 
 
 #### 8. Assumption for this Test:
@@ -45,8 +47,11 @@ There are manily two observations or assumptions that we can make before going t
 * All the continuous column should be Normally distributed and
 * There will be Homogeneity of Variances between the elements of the design.
 
+#### 9.Checking The Normality of Continuous Response Variable:
+It is the first assumption that is to be satisfied to go in the future steps. The most well known test we use for checking Normality is **Shapiro test**. In R we can easily conduct the Shapiro test using the function **shapiro.test()**. In return we get a P-value from this test. Depending on the value, we accept the Null Hypotheis that The data is Normal if P-value is greater than 0.05. And thus we can say that the data is Normally distributed.
 
-
+#### 10. Checking The Homogeneity of Variance:
+Homogeneity of Variances does not mean that all the values respect to each group must have same Variances. It means that the Variances of each group is significantly not different. Now we can find the respevtive Variances using the **with()** and **tapply()** function and using 'var' as an argument. But using this we can not conclude that the Variances we get are Significatly Statistically Differnet or not. For this we use a test called **Bartlett Test**. In R we can conduct this test using the **bartlett.test()** function. This test also gives P-value. If our calculated P-value is grater than 0.05,then we conclude that the Variances of groups are significantly statistically same. 
 
 
 
